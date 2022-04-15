@@ -1,8 +1,8 @@
-import { Element } from "../elements";
+// import { Element } from "../elements";
 
-export class CellContainerElement extends Element {
+export class CellContainerElement {
     name() {
-        return getI18n('cell_container');
+        return 'cell_container';
     }
 
     canSelect() {

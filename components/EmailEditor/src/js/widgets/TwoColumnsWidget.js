@@ -22,16 +22,16 @@ export class TwoColumnsWidget extends Widget {
 
         // default content html
         this.setContentHtml(`
-            <div id="`+this.id+`" style="
+            <div id="`+this.id+`" builder-element="CellContainerElement" style="
                 display: flex;
                 flex-wrap: wrap;
             " data-layout="3-7">
                 <div style="
                     width: 33.333333%;
-                " ></div>
+                " builder-element="CellElement"></div>
                 <div style="
                     width: 66.666667%;
-                " ></div>
+                " builder-element="CellElement"></div>
             </div>
         `);
 

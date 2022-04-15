@@ -791,6 +791,7 @@ Editor.prototype = {
     }
 
     // look through parents element until found or null
+
     while (
       element.obj.parents('[builder-element]').length &&
       !this.canDropBeside(element) &&
@@ -1312,8 +1313,6 @@ Editor.prototype = {
       var s = document.createElement('script');
       var url = jss.shift();
 
-      console.log('loading: ' + url);
-
       s.type = 'text/javascript';
       s.src = url;
       s.setAttribute('builder-helper', 'true');
@@ -1335,7 +1334,6 @@ Editor.prototype = {
     if (jss.length > 0) {
       var s = document.createElement('script');
       var url = jss.shift();
-      console.log('loading: ' + url);
       s.type = 'text/javascript';
       s.src = url;
       s.onload = function () {
@@ -1356,8 +1354,6 @@ Editor.prototype = {
     if (jss.length > 0) {
       var s = document.createElement('script');
       var url = jss.shift();
-
-      console.log('loading: ' + url);
 
       s.type = 'text/javascript';
       s.src = url;
@@ -1710,7 +1706,6 @@ Editor.prototype = {
 
         var obj = $(e.target);
         var element = thisEditor.elementFactory(obj);
-        console.log('element', element);
 
         while (
           element != null &&
