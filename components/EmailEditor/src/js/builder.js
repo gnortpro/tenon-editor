@@ -11,9 +11,11 @@
  *
  */
 import $ from 'jquery';
-import { acpAutocomplete, acpAddCss, acpDictionary } from './autocomplete.js';
+import { acpAutocomplete } from './autocomplete.js';
 import { TextWidget } from './widgets/TextWidget.js';
+import { TwoColumnsWidget } from './widgets/TwoColumnsWidget.js';
 import { clickIframe, goToMainPage } from './beepro.js';
+
 function createElementFromHTML(htmlString) {
   var div = document.createElement('div');
   div.innerHTML = htmlString.trim();
@@ -683,6 +685,7 @@ Editor.prototype = {
 
     // init shadow box
     thisEditor.dragShadow = $('.drag-shadow');
+
     if (!thisEditor.dragShadow.length) {
       var html = '<div class="drag-shadow"></div>';
       $('body').append(html);
@@ -997,17 +1000,19 @@ Editor.prototype = {
       ) {
         widget = thisEditor.widgets[widget_id];
       } else {
-        widget = require('./widgets/TextWidget.js').TextWidget; 
-        // widget = eval(`new ${widget_class}()`);
+        const Widget = require(`./widgets/${widget_class}.js`)[widget_class];
+        widget = new Widget();
       }
 
-      thisEditor.drag(widget, {
-        drop: function () {
-          if (typeof widget.drop !== 'undefined') {
-            widget.drop();
-          }
-        },
-      });
+      if (!!widget) {
+        thisEditor.drag(widget, {
+          drop: function () {
+            if (typeof widget.drop !== 'undefined') {
+              widget.drop();
+            }
+          },
+        });
+      }
     });
 
     // drag over elements in content
@@ -1295,7 +1300,9 @@ Editor.prototype = {
 
   removeInlineEdit: function (container) {
     // remove tinymce instant
-    $('#builder_iframe')[0].contentWindow.tinymce.remove();
+    if ($('#builder_iframe')[0].contentWindow.tinymce) {
+      $('#builder_iframe')[0].contentWindow.tinymce.remove();
+    }
   },
 
   loadIframeJs: function (jss, callback) {
@@ -2044,7 +2051,7 @@ Editor.prototype = {
       // thisEditor.addWidget(new ThreeRow444Widget(), 'row');
       // thisEditor.addWidget(new FourRow3333Widget(), 'row');
 
-      //   thisEditor.addWidget(new TwoColumnsWidget(), 'content');
+        thisEditor.addWidget(new TwoColumnsWidget(), 'content');
       //   thisEditor.addWidget(new ThreeColumnsWidget(), 'content');
 
       //   thisEditor.addWidget(new CenterLogoWidget(), 'content');
@@ -4195,7 +4202,10 @@ Editor.prototype = {
         typeof obj.attr('builder-element') != 'undefined' &&
         obj.attr('builder-element') != ''
       ) {
-        element = eval('new ' + obj.attr('builder-element') + '(obj)');
+
+        const elementClass = obj.attr('builder-element');
+        const Element = require(`./elements/${elementClass}.js`)[elementClass];
+        element = new Element(obj);
       }
 
       // OR get element by tag name

@@ -1,5 +1,7 @@
+import $ from 'jquery';
+import { CellContainerElement } from './elements/CellContainerElement';
 // base element object with methods including initialization
-class Element {
+export class Element {
     constructor(obj) {
         this.obj = obj;
     }
@@ -663,13 +665,3 @@ class Element {
         this.adjustDropInsideLabelPosition();
     }
 }
-
-window.SuperElement = Element;
-
-// get all elements
-function requireAll(r) { 
-    console.log(r.keys());
-    r.keys().forEach(r);
- }
-
-requireAll(require.context('./elements/', true, /\.js$/));

@@ -9,6 +9,14 @@ export class TextWidget extends Widget {
   icon() {
     return 'fal fa-font';
   }
+
+  getButtonHtml() {
+    return "trong DB";
+  }
+
+  dropHtml() {
+    return 'Trong DB';
+  }
 }
 
 // window.TextWidget = TextWidget;
