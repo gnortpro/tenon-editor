@@ -12,25 +12,29 @@ import { OtherComponent } from './components/other';
 export interface IEmailEditorProps {}
 
 const EmailEditor: React.FC<IEmailEditorProps> = () => {
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
       jQuery(document).ready(() => {
-        const editor = new Editor({
-          root: '/',
-          source: '',
-          url: 'http://localhost:3000/blank.html',
-          urlBack: window.location.origin,
-          uploadAssetUrl: 'backend.php?action=asset',
-          uploadAssetMethod: 'POST',
-          uploadTemplateUrl: 'backend.php?action=upload',
-          saveUrl: 'backend.php?action=save',
-          saveMethod: 'POST',
-          templates: [],
-          tags: [],
-          changeTemplateCallback: (url: string) => {},
-        });
-
-        editor.init();
+        if (!(window as any).EDITOR_LOADED) {
+          (window as any).EDITOR_LOADED = true;
+          const editor = new Editor({
+            root: '/',
+            source: '',
+            url: 'http://localhost:3000/blank.html',
+            urlBack: window.location.origin,
+            uploadAssetUrl: 'backend.php?action=asset',
+            uploadAssetMethod: 'POST',
+            uploadTemplateUrl: 'backend.php?action=upload',
+            saveUrl: 'backend.php?action=save',
+            saveMethod: 'POST',
+            templates: [],
+            tags: [],
+            changeTemplateCallback: (url: string) => {},
+          });
+  
+          editor.init();
+        }
       });
     }
   }, []);

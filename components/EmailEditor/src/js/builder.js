@@ -14,6 +14,8 @@ import $ from 'jquery';
 import { acpAutocomplete } from './autocomplete.js';
 import { TextWidget } from './widgets/TextWidget.js';
 import { TwoColumnsWidget } from './widgets/TwoColumnsWidget.js';
+import { OneColumnWidget } from './widgets/OneColumnWidget.js';
+import { AlertWidget } from './widgets/AlertWidget.js';
 import { clickIframe, goToMainPage } from './beepro.js';
 
 function createElementFromHTML(htmlString) {
@@ -980,6 +982,9 @@ Editor.prototype = {
   },
 
   initDrag: function () {
+
+    console.log('init');
+
     var thisEditor = this;
     thisEditor.isDragging = false;
 
@@ -1004,6 +1009,8 @@ Editor.prototype = {
         const Widget = require(`./widgets/${widget_class}.js`)[widget_class];
         widget = new Widget();
       }
+
+      console.log('widget: ', widget);
 
       if (!!widget) {
         thisEditor.drag(widget, {
@@ -2046,11 +2053,14 @@ Editor.prototype = {
       // thisEditor.addWidget(new ThreeRow444Widget(), 'row');
       // thisEditor.addWidget(new FourRow3333Widget(), 'row');
 
+        thisEditor.addWidget(new OneColumnWidget(), 'content');
         thisEditor.addWidget(new TwoColumnsWidget(), 'content');
+
+        thisEditor.addWidget(new TextWidget(), 'content');
+        thisEditor.addWidget(new AlertWidget(), 'content');
       //   thisEditor.addWidget(new ThreeColumnsWidget(), 'content');
 
       //   thisEditor.addWidget(new CenterLogoWidget(), 'content');
-      thisEditor.addWidget(new TextWidget(), 'content');
       // thisEditor.addWidget(new ImageWidget(), 'content');
       //   thisEditor.addWidget(new IntroBlockWidget(), 'content');
 

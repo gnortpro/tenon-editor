@@ -86,7 +86,7 @@ export class Widget {
   }
 }
 
-class FieldWidget extends Widget {
+export class FieldWidget extends Widget {
   replaceTag(html) {
     var thisWidget = this;
 
