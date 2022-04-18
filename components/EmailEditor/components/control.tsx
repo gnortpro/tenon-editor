@@ -1,6 +1,9 @@
+import useTranslation from 'next-translate/useTranslation';
 import React from 'react';
 
 export const ControlComponent = () => {
+  const { t: translate } = useTranslation('common');
+
   return (
     <div style={{ display: 'none' }}>
       {/*ButtonControl*/}
@@ -67,12 +70,8 @@ export const ControlComponent = () => {
       <div id="YoutubeControl">
         <div className="control-[ID]">
           <div className="widget-row px-3 py-2">
-            <h4>
-              {'{'}language.youtube{'}'}
-            </h4>
-            <p className="mb-2">
-              {'{'}language.youtube.enter_youtube_url{'}'}
-            </p>
+            <h4>{translate('youtube')}</h4>
+            <p className="mb-2">{translate('youtubeenter_youtube_url')}</p>
             <div className="place-value">
               <span className="">
                 <input
@@ -85,9 +84,7 @@ export const ControlComponent = () => {
             </div>
           </div>
           <div className="widget-row px-3 py-2 d-flex align-items-center">
-            <div className="label mr-auto">
-              {'{'}language.youtube.width{'}'}
-            </div>
+            <div className="label mr-auto">{translate('youtubewidth')}</div>
             <div className="place-value">
               <span className="">
                 <input
@@ -99,9 +96,7 @@ export const ControlComponent = () => {
             </div>
           </div>
           <div className="widget-row px-3 py-2 d-flex align-items-center">
-            <div className="label mr-auto">
-              {'{'}language.youtube.height{'}'}
-            </div>
+            <div className="label mr-auto">{translate('youtubeheight')}</div>
             <div className="place-value">
               <span className="">
                 <input
@@ -113,24 +108,14 @@ export const ControlComponent = () => {
             </div>
           </div>
           <div className="widget-row px-3 py-2 d-flex align-items-center">
-            <div className="label mr-auto">
-              {'{'}language.youtube.alignment{'}'}
-            </div>
+            <div className="label mr-auto">{translate('youtubealignment')}</div>
             <div className="place-value">
               <span className="">
                 <select className="form-control alignment">
-                  <option value="">
-                    {'{'}language.youtube.default{'}'}
-                  </option>
-                  <option value="left">
-                    {'{'}language.youtube.left{'}'}
-                  </option>
-                  <option value="right">
-                    {'{'}language.youtube.right{'}'}
-                  </option>
-                  <option value="center">
-                    {'{'}language.youtube.center{'}'}
-                  </option>
+                  <option value="">{translate('youtubedefault')}</option>
+                  <option value="left">{translate('youtubeleft')}</option>
+                  <option value="right">{translate('youtuberight')}</option>
+                  <option value="center">{translate('youtubecenter')}</option>
                 </select>
               </span>
             </div>
@@ -184,7 +169,7 @@ export const ControlComponent = () => {
               <div className="widget-row px-3 py-2">
                 <div className="d-flex align-items-center">
                   <div className="label mr-auto">
-                    {'{'}language.background_image.image{'}'}
+                    {translate('background_imageimage')}
                   </div>
                   <div
                     className="btn-group mr-2"
@@ -210,7 +195,7 @@ export const ControlComponent = () => {
               </div>
               <div className="widget-row px-3 py-2 d-flex align-items-center">
                 <div className="label mr-auto">
-                  {'{'}language.background_image.color{'}'}
+                  {translate('background_imagecolor')}
                 </div>
                 <div className="place-value">
                   <span className="color-picker">
@@ -229,7 +214,7 @@ export const ControlComponent = () => {
               </div>
               <div className="widget-row px-3 py-2 d-flex align-items-center">
                 <div className="label mr-auto">
-                  {'{'}language.background_image.repeat{'}'}
+                  {translate('background_imagerepeat')}
                 </div>
                 <div className="place-value">
                   <select className="background-repeat form-control enctype">
@@ -247,7 +232,7 @@ export const ControlComponent = () => {
               </div>
               <div className="widget-row px-3 py-2 d-flex align-items-center">
                 <div className="label mr-auto">
-                  {'{'}language.background_image.size{'}'}
+                  {translate('background_imagesize')}
                 </div>
                 <div className="place-value">
                   <input
@@ -259,7 +244,7 @@ export const ControlComponent = () => {
               </div>
               <div className="widget-row px-3 py-2 d-flex align-items-center">
                 <div className="label mr-auto">
-                  {'{'}language.background_image.position{'}'}
+                  {translate('background_imageposition')}
                 </div>
                 <div className="place-value">
                   <input
@@ -298,9 +283,7 @@ export const ControlComponent = () => {
             <div className="wg-info w-url-container d-flex align-items-center">
               <div className="tren">
                 <div className="trai">
-                  <span>
-                    {'{'}language.image_link{'}'}
-                  </span>
+                  <span>{translate('image_link')}</span>
                 </div>
               </div>
               <div className="pr-3">
@@ -338,7 +321,7 @@ export const ControlComponent = () => {
           <div className="image-size custom-size" style={{ display: 'none' }}>
             <div className="widget-section d-flex align-items-center px-3">
               <div className="mr-auto control-label">
-                {'{'}language.image_size.width{'}'}
+                {translate('image_size.width')}
               </div>
               <div>
                 <input
@@ -350,7 +333,7 @@ export const ControlComponent = () => {
             </div>
             <div className="widget-section d-flex align-items-center px-3">
               <span className="mr-auto control-label">
-                {'{'}language.image_size.height{'}'}
+                {translate('image_size.height')}
               </span>
               <div>
                 <input
@@ -374,7 +357,7 @@ export const ControlComponent = () => {
         <div className="control-[ID]">
           <div className="widget-section d-flex align-items-center">
             <div className="label mr-auto">
-              {'{'}language.field.control.form.method{'}'}
+              {translate('fieldcontrolformmethod')}
             </div>
             <div className="pr-3">
               {/* <input class="method" type="text" value="[METHOD]"/> */}
@@ -386,7 +369,7 @@ export const ControlComponent = () => {
           </div>
           <div className="widget-section d-flex align-items-center pr-3">
             <div className="label mr-auto">
-              {'{'}language.field.control.autocomplete{'}'}
+              {translate('fieldcontrolautocomplete')}
             </div>
             <div className="">
               <span className="mswitch autocomplete-switch" data-checked="true">
@@ -396,7 +379,7 @@ export const ControlComponent = () => {
           </div>
           <div className="widget-section d-flex align-items-center">
             <div className="label mr-auto">
-              {'{'}language.field.control.form.enctype{'}'}
+              {translate('fieldcontrolformenctype')}
             </div>
             <div className="place-value">
               <select name="enctype" className="form-control enctype">
@@ -410,7 +393,7 @@ export const ControlComponent = () => {
           </div>
           <div className="widget-section d-flex align-items-center">
             <div className="label mr-auto">
-              {'{'}language.field.control.form.accept_charset{'}'}
+              {translate('fieldcontrolformaccept_charset')}
             </div>
             <div className="place-value">
               <select
@@ -429,7 +412,7 @@ export const ControlComponent = () => {
         <div className="control-[ID]">
           <div className="widget-section d-flex align-items-center pr-3">
             <div className="label mr-auto">
-              {'{'}language.field.control.captcha{'}'}
+              {translate('fieldcontrolcaptcha')}
             </div>
             <div className="">
               <span className="mswitch captcha-switch" data-checked="true">
@@ -450,7 +433,7 @@ export const ControlComponent = () => {
         <div className="control-[ID]">
           <div className="widget-section d-flex align-items-center">
             <div className="label mr-auto">
-              {'{'}language.field.control.field_name{'}'}
+              {translate('fieldcontrolfield_name')}
             </div>
             <div className="place-value pr-3">
               <input
@@ -463,7 +446,7 @@ export const ControlComponent = () => {
           </div>
           <div className="widget-section d-flex align-items-center">
             <div className="label mr-auto">
-              {'{'}language.field.control.field_id{'}'}
+              {translate('fieldcontrolfield_id')}
             </div>
             <div className="place-value pr-3">
               <div className="form-element-widget m-0">
@@ -486,7 +469,7 @@ export const ControlComponent = () => {
           </div>
           <div className="widget-section d-flex align-items-center pr-3">
             <div className="label mr-auto">
-              {'{'}language.field.control.show_label{'}'}
+              {translate('fieldcontrolshow_label')}
             </div>
             <div className="">
               <span className="mswitch label-switch" data-checked="true">
@@ -496,7 +479,7 @@ export const ControlComponent = () => {
           </div>
           <div className="widget-section d-flex align-items-center field-label-line">
             <div className="label mr-auto">
-              {'{'}language.field.control.label{'}'}
+              {translate('fieldcontrollabel')}
             </div>
             <div className="place-value pr-3">
               <input
@@ -513,7 +496,7 @@ export const ControlComponent = () => {
         <div className="control-[ID]">
           <div className="widget-section d-flex align-items-center pr-3">
             <div className="label mr-auto font-weight-normal">
-              {'{'}language.field.control.validation.required{'}'}
+              {translate('fieldcontrolvalidationrequired')}
             </div>
             <div className="">
               <span className="mswitch required-switch" data-checked="true">
@@ -524,7 +507,7 @@ export const ControlComponent = () => {
           <div className="validation-rules">
             <div className="widget-section d-flex align-items-center">
               <div className="label mr-auto">
-                {'{'}language.field.control.validation.min_length{'}'}
+                {translate('fieldcontrolvalidationmin_length')}
               </div>
               <div className="place-value pr-3">
                 <input
@@ -536,7 +519,7 @@ export const ControlComponent = () => {
             </div>
             <div className="widget-section d-flex align-items-center">
               <div className="label mr-auto">
-                {'{'}language.field.control.validation.max_length{'}'}
+                {translate('fieldcontrolvalidationmax_length')}
               </div>
               <div className="place-value pr-3">
                 <input
@@ -548,7 +531,7 @@ export const ControlComponent = () => {
             </div>
             <div className="widget-section d-flex align-items-center">
               <div className="label mr-auto">
-                {'{'}language.field.control.validation.regexp{'}'}
+                {translate('fieldcontrolvalidationregexp')}
               </div>
               <div className="place-value pr-3">
                 <input className="regexp" type="text" defaultValue="[REGEXP]" />
@@ -621,7 +604,9 @@ export const ControlComponent = () => {
               <option value="{{root}}image/linkedin.png">Linkedin</option>
               <option value="{{root}}image/tumblr.png">Tumblr</option>
               <option value="{{root}}image/google-plus.png">Google Plus</option>
-              <option value="{{root}}image/youtube.png">YouTube</option>
+              <option value="{{root}}image/translate('youtubepng">
+                YouTube
+              </option>
               <option value="{{root}}image/line.png">LINE</option>
               <option value="{{root}}image/wechat.png">WeChat</option>
               <option value="{{root}}image/weibo.png">Weibo</option>
@@ -629,9 +614,7 @@ export const ControlComponent = () => {
             </select>
           </div>
           <div className="widget-section d-flex align-items-center pr-3">
-            <div className="label mr-auto">
-              {'{'}language.link{'}'}
-            </div>
+            <div className="label mr-auto">{translate('link')}</div>
             <div className="">
               <input
                 style={{ width: 220 }}
@@ -643,10 +626,10 @@ export const ControlComponent = () => {
           </div>
           <div className="widget-section d-flex align-items-center px-2">
             <button className="btn btn-secondary mr-2 but-dup">
-              {'{'}language.widget.duplicate{'}'}
+              {translate('widgetduplicate')}
             </button>
             <button className="btn btn-warning but-remove">
-              {'{'}language.widget.remove{'}'}
+              {translate('widgetremove')}
             </button>
           </div>
         </div>
@@ -869,16 +852,14 @@ export const ControlComponent = () => {
           <div className="wg-info">
             <div className="tren">
               <div className="trai">
-                <span>
-                  {'{'}language.wpanel.controls.image_link.title{'}'}
-                </span>
+                <span>{translate('wpanelcontrolsimage_linktitle')}</span>
               </div>
             </div>
             <div className="giua">
               <div className="url-link">
                 <div className="thongso">
                   <span className="url">
-                    {'{'}language.wpanel.controls.url.title{'}'}
+                    {translate('wpanelcontrolsurl.title')}
                   </span>
                   <span className="value">
                     <input type="text" defaultValue="[HREF]" />
@@ -888,10 +869,10 @@ export const ControlComponent = () => {
             </div>
             <div className="duoi">
               <a className="" href="">
-                {'{'}language.wpanel.controls.special_link.title{'}'}
+                {translate('wpanelcontrolsspecial_link.title')}
               </a>
               <a className="" href="">
-                {'{'}language.wpanel.controls.link_file.title{'}'}
+                {translate('wpanelcontrolslink_file.title')}
               </a>
             </div>
           </div>
@@ -910,7 +891,7 @@ export const ControlComponent = () => {
                   <div className="widget-value right">
                     <div className="toggle">
                       <div className="toggle__status toggle__status--off">
-                        {'{'}language.wpanel.controls.more_option.title{'}'}
+                        {translate('wpanelcontrolsmore_option.title')}
                       </div>
                       <label className="switch check-all-padding">
                         <input type="checkbox" />
@@ -939,7 +920,7 @@ export const ControlComponent = () => {
                     <div className="all-padding-section">
                       <div className="_1_minus-plus _1_minus-plus-block">
                         <span className="label">
-                          {'{'}language.wpanel.controls.all_side.title{'}'}
+                          {translate('wpanelcontrolsall_side.title')}
                         </span>
                         <div className="minus-plus">
                           <span className="minus">
@@ -965,7 +946,7 @@ export const ControlComponent = () => {
                       <div className="left padding" id="padding">
                         <div className="tren mr-3">
                           <span className="label">
-                            {'{'}language.wpanel.controls.top.title{'}'}
+                            {translate('wpanelcontrolstop.title')}
                           </span>
                           <div className="minus-plus">
                             <span className="minus">
@@ -988,7 +969,7 @@ export const ControlComponent = () => {
                         </div>
                         <div className="tren">
                           <span className="label">
-                            {'{'}language.wpanel.controls.bottom.title{'}'}
+                            {translate('wpanelcontrolsbottom.title')}
                           </span>
                           <div className="minus-plus minus-bottom-right">
                             <span className="minus" style={{}}>
@@ -1013,7 +994,7 @@ export const ControlComponent = () => {
                       <div className="left padding" style={{}} id="padding">
                         <div className="tren mr-3">
                           <span className="label">
-                            {'{'}language.wpanel.controls.left.title{'}'}
+                            {translate('wpanelcontrolsleft.title')}
                           </span>
                           <div className="minus-plus">
                             <span className="minus">
@@ -1036,7 +1017,7 @@ export const ControlComponent = () => {
                         </div>
                         <div className="tren">
                           <span className="label">
-                            {'{'}language.wpanel.controls.right.title{'}'}
+                            {translate('wpanelcontrolsright.title')}
                           </span>
                           <div
                             className="minus-plus minus-bottom-right"
@@ -1089,9 +1070,9 @@ export const ControlComponent = () => {
             </div>
             <div className="tren">
               <div className="d-flex align-items-canter justify-content-center">
-                {/* <div class="label">{language.wpanel.controls.image_name.title}</div> */}
+                {/* <div class="label">{language.translate('wpanelcontrolsimage_name.title')}</div> */}
                 <span id="name-image">
-                  {'{'}language.wpanel.controls.logo_name.title{'}'}
+                  {translate('wpanelcontrolslogo_name.title')}
                 </span>
               </div>
               <div className="button">
@@ -1100,9 +1081,9 @@ export const ControlComponent = () => {
                   id="[uploadImage-ID]"
                   type="submit"
                 >
-                  {'{'}language.wpanel.controls.change_image.title{'}'}
+                  {translate('wpanelcontrolschange_image.title')}
                 </button>
-                {/* <button class="btn btn-secondary" style="pointer-events: none;">{language.wpanel.controls.effect.title}</button> */}
+                {/* <button class="btn btn-secondary" style="pointer-events: none;">{language.translate('wpanelcontrolseffect.title')}</button> */}
               </div>
             </div>
           </div>
@@ -1110,7 +1091,7 @@ export const ControlComponent = () => {
             <div className="row">
               <div className="col-md-3 left">
                 <div className="widget-label">
-                  {'{'}language.wpanel.controls.alternate.title{'}'}
+                  {translate('wpanelcontrolsalternate.title')}
                 </div>
               </div>
               <div className="col-md-9 right">
@@ -1126,9 +1107,7 @@ export const ControlComponent = () => {
           <div className="widget range" id="image-control-ID">
             <div className="row">
               <div className="col-md-8 left">
-                <div className="widget-label">
-                  {'{'}language.image.width{'}'}
-                </div>
+                <div className="widget-label">{translate('imagewidth')}</div>
               </div>
             </div>
             <div className="tren">
@@ -1141,7 +1120,7 @@ export const ControlComponent = () => {
                 className="image-width"
               />
               <div className="thongso image-width-text">
-                {'{'}language.wpanel.controls.value.title{'}'}
+                {translate('wpanelcontrolsvalue.title')}
               </div>
             </div>
           </div>
@@ -1151,16 +1130,14 @@ export const ControlComponent = () => {
               <div className="col-md-8 left">
                 <div className="widget-label">
                   <div className="d-flex align-items-center">
-                    <div>
-                      {'{'}language.image.height{'}'}
-                    </div>
+                    <div>{translate('imageheight')}</div>
                   </div>
                 </div>
               </div>
               <div className="col-md-4 right">
                 <div className="d-flex align-items-center">
                   <div className="mr-2 small">
-                    {'{'}language.image.auto_height{'}'}
+                    {translate('imageauto_height')}
                   </div>
                   <div className="d-flex align-items-center">
                     <label style={{ position: 'relative' }}>
@@ -1184,7 +1161,7 @@ export const ControlComponent = () => {
                 className="image-height"
               />
               <div className="thongso image-height-text">
-                {'{'}language.wpanel.controls.value.title{'}'}
+                {translate('wpanelcontrolsvalue.title')}
               </div>
             </div>
           </div>
@@ -1195,21 +1172,21 @@ export const ControlComponent = () => {
               <ul>
                 <li>
                   <i
-                    className="{builder-icon-align-left} icon-left-img icon-align"
+                    className="builder-icon-align-left icon-left-img icon-align"
                     align="left"
                     id="[icon-left-ID]"
                   />
                 </li>
                 <li>
                   <i
-                    className="{builder-icon-align-justify} icon-center-img icon-align"
+                    className="builder-icon-align-justify icon-center-img icon-align"
                     align="center"
                     id="[icon-center-ID]"
                   />
                 </li>
                 <li>
                   <i
-                    className="{builder-icon-align-right} icon-right-img icon-align"
+                    className="builder-icon-align-right icon-right-img icon-align"
                     align="right"
                     id="[icon-right-ID]"
                   />
@@ -1221,16 +1198,14 @@ export const ControlComponent = () => {
             <div className="wg-info">
               <div className="tren">
                 <div className="trai">
-                  <span>
-                    {'{'}language.image_url{'}'}
-                  </span>
+                  <span>{translate('image_url')}</span>
                 </div>
               </div>
               <div className="giua">
                 <div className="url-link">
                   <div className="thongso">
                     <span className="url">
-                      {'{'}language.wpanel.controls.url.title{'}'}
+                      {translate('wpanelcontrolsurl.title')}
                     </span>
                     <span className="value">
                       <input
@@ -1245,7 +1220,7 @@ export const ControlComponent = () => {
               </div>
               <div className="duoi">
                 <a className="copy-url" href="">
-                  {'{'}language.wpanel.controls.copy_url.title{'}'}
+                  {translate('wpanelcontrolscopy_url.title')}
                 </a>
               </div>
             </div>
@@ -1266,7 +1241,7 @@ export const ControlComponent = () => {
             <div className="row">
               <div className="col-md-8 left">
                 <div className="widget-label">
-                  {'{'}language.wpanel.controls.auto_width.title{'}'}
+                  {translate('wpanelcontrolsauto_width.title')}
                 </div>
               </div>
               <div
@@ -1308,7 +1283,7 @@ export const ControlComponent = () => {
             style={{ height: '60px !important' }}
           >
             <div className="label">
-              {'{'}language.wpanel.controls.background_color.title{'}'}
+              {translate('wpanelcontrolsbackground_color.title')}
             </div>
             <div className="thongso background">
               <span className="click-color">
@@ -1334,7 +1309,7 @@ export const ControlComponent = () => {
             style={{ height: '60px !important' }}
           >
             <div className="label">
-              {'{'}language.wpanel.controls.text_color.title{'}'}
+              {translate('wpanelcontrolstext_color.title')}
             </div>
             <div className="thongso background">
               <span className="click-color">
@@ -1360,7 +1335,7 @@ export const ControlComponent = () => {
             style={{ height: '60px !important' }}
           >
             <div className="label">
-              {'{'}language.wpanel.controls.align.title{'}'}
+              {translate('wpanelcontrolsalign.title')}
             </div>
             <div className="thongso background">
               <div className="item_1-2 right">
@@ -1402,7 +1377,7 @@ export const ControlComponent = () => {
             style={{ height: '60px !important' }}
           >
             <div className="label">
-              {'{'}language.wpanel.controls.line_height.title{'}'}
+              {translate('wpanelcontrolsline_height.title')}
             </div>
             <div className="thongso">
               <ul>
@@ -1446,7 +1421,7 @@ export const ControlComponent = () => {
             style={{ height: '60px !important' }}
           >
             <div className="label">
-              {'{'}language.wpanel.controls.border_radius.title{'}'}
+              {translate('wpanelcontrolsborder_radius.title')}
             </div>
             <div className="thongso">
               <div className="minus-plus border-radius">
@@ -1474,14 +1449,14 @@ export const ControlComponent = () => {
               <div className="row">
                 <div className="col-md-7 left">
                   <div className="widget-label">
-                    {'{'}language.wpanel.controls.border.title{'}'}
+                    {translate('wpanelcontrolsborder.title')}
                   </div>
                 </div>
                 <div className="col-md-5 right">
                   <div className="widget-value right">
                     <div className="toggle">
                       <div className="toggle__status toggle__status--off">
-                        {'{'}language.wpanel.controls.more_option.title{'}'}
+                        {translate('wpanelcontrolsmore_option.title')}
                       </div>
                       <label className="switch check-all-border">
                         <input type="checkbox" />
@@ -1513,7 +1488,7 @@ export const ControlComponent = () => {
                     style={{}}
                   >
                     <span className="label" style={{}}>
-                      {'{'}language.wpanel.controls.all_side.title{'}'}
+                      {translate('wpanelcontrolsall_side.title')}
                     </span>
                     <div
                       className="btn-group dropdown-custom dropdown-custom--cs dropdown"
@@ -1550,7 +1525,7 @@ export const ControlComponent = () => {
                             data-value="solid"
                             className="ng-binding ng-binding-solid"
                           >
-                            {'{'}language.wpanel.controls.solid.title{'}'}
+                            {translate('wpanelcontrolssolid.title')}
                           </a>
                         </li>
                         {/* end ngRepeat: style in styles */}
@@ -1562,7 +1537,7 @@ export const ControlComponent = () => {
                             data-value="dotted"
                             className="ng-binding ng-binding-dotted"
                           >
-                            {'{'}language.wpanel.controls.dotted.title{'}'}
+                            {translate('wpanelcontrolsdotted.title')}
                           </a>
                         </li>
                         {/* end ngRepeat: style in styles */}
@@ -1574,7 +1549,7 @@ export const ControlComponent = () => {
                             data-value="dashed"
                             className="ng-binding ng-binding-dashed"
                           >
-                            {'{'}language.wpanel.controls.dashed.title{'}'}
+                            {translate('wpanelcontrolsdashed.title')}
                           </a>
                         </li>
                         {/* end ngRepeat: style in styles */}
@@ -1635,7 +1610,7 @@ export const ControlComponent = () => {
                         className="label"
                         style={{ width: '100% !important' }}
                       >
-                        {'{'}language.wpanel.controls.top.title{'}'}
+                        {translate('wpanelcontrolstop.title')}
                       </span>
                       <div
                         className="btn-group dropdown-custom dropdown-custom--cs dropdown"
@@ -1653,7 +1628,7 @@ export const ControlComponent = () => {
                           aria-expanded="false"
                         >
                           <span className="ng-binding border-style-top">
-                            {'{'}language.wpanel.controls.solid.title{'}'}
+                            {translate('wpanelcontrolssolid.title')}
                           </span>
                           <div className="arrows">
                             <span className="caret up" />
@@ -1674,7 +1649,7 @@ export const ControlComponent = () => {
                               data-value="solid"
                               className="ng-binding ng-binding-solid-top"
                             >
-                              {'{'}language.wpanel.controls.solid.title{'}'}
+                              {translate('wpanelcontrolssolid.title')}
                             </a>
                           </li>
                           {/* end ngRepeat: style in styles */}
@@ -1686,7 +1661,7 @@ export const ControlComponent = () => {
                               data-value="dotted"
                               className="ng-binding ng-binding-dotted-top"
                             >
-                              {'{'}language.wpanel.controls.dotted.title{'}'}
+                              {translate('wpanelcontrolsdotted.title')}
                             </a>
                           </li>
                           {/* end ngRepeat: style in styles */}
@@ -1698,7 +1673,7 @@ export const ControlComponent = () => {
                               data-value="dashed"
                               className="ng-binding ng-binding-dashed-top"
                             >
-                              {'{'}language.wpanel.controls.dashed.title{'}'}
+                              {translate('wpanelcontrolsdashed.title')}
                             </a>
                           </li>
                           {/* end ngRepeat: style in styles */}
@@ -1760,7 +1735,7 @@ export const ControlComponent = () => {
                         className="label"
                         style={{ width: '100% !important' }}
                       >
-                        {'{'}language.wpanel.controls.right.title{'}'}
+                        {translate('wpanelcontrolsright.title')}
                       </span>
                       <div
                         className="btn-group dropdown-custom dropdown-custom--cs dropdown"
@@ -1778,7 +1753,7 @@ export const ControlComponent = () => {
                           aria-expanded="false"
                         >
                           <span className="ng-binding border-style-right">
-                            {'{'}language.wpanel.controls.solid.title{'}'}
+                            {translate('wpanelcontrolssolid.title')}
                           </span>
                           <div className="arrows">
                             <span className="caret up" />
@@ -1799,7 +1774,7 @@ export const ControlComponent = () => {
                               data-value="solid"
                               className="ng-binding ng-binding-solid-right"
                             >
-                              {'{'}language.wpanel.controls.solid.title{'}'}
+                              {translate('wpanelcontrolssolid.title')}
                             </a>
                           </li>
                           {/* end ngRepeat: style in styles */}
@@ -1811,7 +1786,7 @@ export const ControlComponent = () => {
                               data-value="dotted"
                               className="ng-binding ng-binding-dotted-right"
                             >
-                              {'{'}language.wpanel.controls.dotted.title{'}'}
+                              {translate('wpanelcontrolsdotted.title')}
                             </a>
                           </li>
                           {/* end ngRepeat: style in styles */}
@@ -1823,7 +1798,7 @@ export const ControlComponent = () => {
                               data-value="dashed"
                               className="ng-binding ng-binding-dashed-right"
                             >
-                              {'{'}language.wpanel.controls.dashed.title{'}'}
+                              {translate('wpanelcontrolsdashed.title')}
                             </a>
                           </li>
                           {/* end ngRepeat: style in styles */}
@@ -1885,7 +1860,7 @@ export const ControlComponent = () => {
                         className="label"
                         style={{ width: '100% !important' }}
                       >
-                        {'{'}language.wpanel.controls.bottom.title{'}'}
+                        {translate('wpanelcontrolsbottom.title')}
                       </span>
                       <div
                         className="btn-group dropdown-custom dropdown-custom--cs dropdown"
@@ -1903,7 +1878,7 @@ export const ControlComponent = () => {
                           aria-expanded="false"
                         >
                           <span className="ng-binding border-style-bottom">
-                            {'{'}language.wpanel.controls.solid.title{'}'}
+                            {translate('wpanelcontrolssolid.title')}
                           </span>
                           <div className="arrows">
                             <span className="caret up" />
@@ -1924,7 +1899,7 @@ export const ControlComponent = () => {
                               data-value="solid"
                               className="ng-binding ng-binding-solid-bottom"
                             >
-                              {'{'}language.wpanel.controls.solid.title{'}'}
+                              {translate('wpanelcontrolssolid.title')}
                             </a>
                           </li>
                           {/* end ngRepeat: style in styles */}
@@ -1936,7 +1911,7 @@ export const ControlComponent = () => {
                               data-value="dotted"
                               className="ng-binding ng-binding-dotted-bottom"
                             >
-                              {'{'}language.wpanel.controls.dotted.title{'}'}
+                              {translate('wpanelcontrolsdotted.title')}
                             </a>
                           </li>
                           {/* end ngRepeat: style in styles */}
@@ -1948,7 +1923,7 @@ export const ControlComponent = () => {
                               data-value="dashed"
                               className="ng-binding ng-binding-dashed-bottom"
                             >
-                              {'{'}language.wpanel.controls.dashed.title{'}'}
+                              {translate('wpanelcontrolsdashed.title')}
                             </a>
                           </li>
                           {/* end ngRepeat: style in styles */}
@@ -2010,7 +1985,7 @@ export const ControlComponent = () => {
                         className="label"
                         style={{ width: '100% !important' }}
                       >
-                        {'{'}language.wpanel.controls.left.title{'}'}
+                        {translate('wpanelcontrolsleft.title')}
                       </span>
                       <div
                         className="btn-group dropdown-custom dropdown-custom--cs dropdown"
@@ -2028,7 +2003,7 @@ export const ControlComponent = () => {
                           aria-expanded="false"
                         >
                           <span className="ng-binding border-style-left">
-                            {'{'}language.wpanel.controls.solid.title{'}'}
+                            {translate('wpanelcontrolssolid.title')}
                           </span>
                           <div className="arrows">
                             <span className="caret up" />
@@ -2049,7 +2024,7 @@ export const ControlComponent = () => {
                               data-value="solid"
                               className="ng-binding ng-binding-solid-left"
                             >
-                              {'{'}language.wpanel.controls.solid.title{'}'}
+                              {translate('wpanelcontrolssolid.title')}
                             </a>
                           </li>
                           {/* end ngRepeat: style in styles */}
@@ -2061,7 +2036,7 @@ export const ControlComponent = () => {
                               data-value="dotted"
                               className="ng-binding ng-binding-dotted-left"
                             >
-                              {'{'}language.wpanel.controls.dotted.title{'}'}
+                              {translate('wpanelcontrolsdotted.title')}
                             </a>
                           </li>
                           {/* end ngRepeat: style in styles */}
@@ -2073,7 +2048,7 @@ export const ControlComponent = () => {
                               data-value="dashed"
                               className="ng-binding ng-binding-dashed-left"
                             >
-                              {'{'}language.wpanel.controls.dashed.title{'}'}
+                              {translate('wpanelcontrolsdashed.title')}
                             </a>
                           </li>
                           {/* end ngRepeat: style in styles */}
@@ -2154,9 +2129,7 @@ export const ControlComponent = () => {
                   name="redirect-page"
                   style={{ marginRight: 5 }}
                 />
-                <span>
-                  {'{'}language.wpanel.controls.link_to.title{'}'}
-                </span>
+                <span>{translate('wpanelcontrolslink_to.title')}</span>
               </div>
               <div className="phai">
                 <button type="" value="" className="owp-button" id="" />
@@ -2175,7 +2148,7 @@ export const ControlComponent = () => {
                 <div className="url-link">
                   <div className="thongso">
                     <span className="url">
-                      {'{'}language.wpanel.controls.url.title{'}'}
+                      {translate('wpanelcontrolsurl.title')}
                     </span>
                     <span className="value">
                       <input
@@ -2191,7 +2164,7 @@ export const ControlComponent = () => {
             {/* <div class="tren" id="action-redirect-page" style="border-top: 1px solid #eee;">
                 <div class="trai">
                     <input type="radio" class="check-action-page" name="redirect-page" style="margin-right: 5px;"/>
-                    <span>{language.wpanel.controls.actions.title}</span>
+                    <span>{language.translate('wpanelcontrolsactions.title')}</span>
                 </div>
                 <div class="phai">
                     <button type="" value="" class="action-button-link" id=""></button>
@@ -2222,7 +2195,7 @@ export const ControlComponent = () => {
               </div>
               <div className="item_1">
                 <p className="widget__label widget__label--cs">
-                  {'{'}language.wpanel.controls.widget_label.title{'}'}
+                  {translate('wpanelcontrolswidget_label.title')}
                 </p>
               </div>
             </div>
@@ -2231,13 +2204,13 @@ export const ControlComponent = () => {
               <div className="item_2-4">
                 <div className="widget__box">
                   <span className="box__label">
-                    {'{'}language.wpanel.controls.play_icon.title{'}'}
+                    {translate('wpanelcontrolsplay_icon.title')}
                   </span>
                   <div className="box__action">
                     <div className="dropdown--custom">
                       <button className="type dropdown--toggle">
                         <span>
-                          {'{'}language.wpanel.controls.round_solid.title{'}'}
+                          {translate('wpanelcontrolsround_solid.title')}
                         </span>
                         <div className="arrows">
                           <span className="caret up" />
@@ -2247,45 +2220,25 @@ export const ControlComponent = () => {
                       </button>
                       <ul className="dropdown-menu dropdown-menu-type">
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.round_solid.title{'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolsround_solid.title')}</a>
                         </li>
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.round_outline.title
-                            {'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolsround_outline')}</a>
                         </li>
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.rectangle_solid.title
-                            {'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolsrectangle_solid')}</a>
                         </li>
                         <li className="item-drop">
-                          <a>
-                            {'{'}
-                            language.wpanel.controls.rectangle_outline.title
-                            {'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolsrectangle_outline')}</a>
                         </li>
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.square_solid.title
-                            {'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolssquare_solid')}</a>
                         </li>
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.square_outline.title
-                            {'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolssquare_outline')}</a>
                         </li>
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.arrow_only.title{'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolsarrow_only.title')}</a>
                         </li>
                       </ul>
                     </div>
@@ -2293,14 +2246,12 @@ export const ControlComponent = () => {
                 </div>
                 <div className="widget__box">
                   <span className="box__label">
-                    {'{'}language.wpanel.controls.play_icon_color.title{'}'}
+                    {translate('wpanelcontrolsplay_icon_color.title')}
                   </span>
                   <div className="box__action">
                     <div className="dropdown--custom">
                       <button className="color dropdown--toggle">
-                        <span>
-                          {'{'}language.wpanel.controls.light.title{'}'}
-                        </span>
+                        <span>{translate('wpanelcontrolslight.title')}</span>
                         <div className="arrows">
                           <span className="caret up" />
                           <span className="caret down" />
@@ -2309,14 +2260,10 @@ export const ControlComponent = () => {
                       </button>
                       <ul className="dropdown-menu dropdown-menu-color">
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.light.title{'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolslight.title')}</a>
                         </li>
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.dark.title{'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolsdark.title')}</a>
                         </li>
                       </ul>
                     </div>
@@ -2324,14 +2271,12 @@ export const ControlComponent = () => {
                 </div>
                 <div className="widget__box" style={{ marginBottom: 40 }}>
                   <span className="box__label">
-                    {'{'}language.wpanel.controls.play_icon_size.title{'}'}
+                    {translate('wpanelcontrolsplay_icon_size.title')}
                   </span>
                   <div className="box__action">
                     <div className="dropdown--custom">
                       <button className="size dropdown--toggle">
-                        <span>
-                          {'{'}language.wpanel.controls.value.title{'}'}
-                        </span>
+                        <span>{translate('wpanelcontrolsvalue.title')}</span>
                         <div className="arrows">
                           <span className="caret up" />
                           <span className="caret down" />
@@ -2340,29 +2285,19 @@ export const ControlComponent = () => {
                       </button>
                       <ul className="dropdown-menu dropdown-menu-size">
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.value.title{'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolsvalue.title')}</a>
                         </li>
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.value_55.title{'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolsvalue_55.title')}</a>
                         </li>
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.value_60.title{'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolsvalue_60.title')}</a>
                         </li>
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.value_65.title{'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolsvalue_65.title')}</a>
                         </li>
                         <li className="item-drop">
-                          <a>
-                            {'{'}language.wpanel.controls.value_70.title{'}'}
-                          </a>
+                          <a>{translate('wpanelcontrolsvalue_70.title')}</a>
                         </li>
                       </ul>
                     </div>
@@ -2393,10 +2328,10 @@ export const ControlComponent = () => {
             <div className="widget-section-2 _1khoi">
               <div className="widget-desc">
                 <h3 className="widget-label">
-                  {'{'}language.wpanel.controls.des_label.title{'}'}
+                  {translate('wpanelcontrolsdes_label.title')}
                 </h3>
                 <p className="widget-label-des">
-                  {'{'}language.wpanel.controls.des_widget_label.title{'}'}
+                  {translate('wpanelcontrolsdes_widget_label.title')}
                 </p>
               </div>
             </div>

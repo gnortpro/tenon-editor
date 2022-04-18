@@ -1688,7 +1688,7 @@ Editor.prototype = {
           thisEditor.transformHtml(`
                 <style builder-helper="true" class="builder-tool">
                     [builder-element=CellElement]:empty::after {
-                        content: "{language.drag_items_here}";
+                        content: "Drag items here";
                     }
                 </style>
             `)

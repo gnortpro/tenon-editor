@@ -1,6 +1,9 @@
+import useTranslation from 'next-translate/useTranslation';
 import React from 'react';
 
 export const OtherComponent = () => {
+  const { t: translate } = useTranslation('common');
+
   return (
     <>
       <div className="showPreview">
@@ -46,7 +49,7 @@ export const OtherComponent = () => {
                       fontStyle: 'normal',
                     }}
                   >
-                    {'{'}language.wpanel.others.preview_mode.title{'}'}
+                    {translate('wpanelotherspreview_modetitle')}
                   </h3>
                   <div
                     ng-model="conditions"
@@ -67,7 +70,7 @@ export const OtherComponent = () => {
                         uib-btn-radio="'desktop'"
                       >
                         <i className="{builder-icon-laptop}" />
-                        {'{'}language.wpanel.others.desktop.title{'}'}
+                        {translate('wpanelothersdesktoptitle')}
                       </label>
                     </div>
                     <div className="pr-mobile click-active-preview">
@@ -77,7 +80,7 @@ export const OtherComponent = () => {
                         uib-btn-radio="'mobile'"
                       >
                         <i className="{builder-icon-mobile}" />
-                        {'{'}language.wpanel.others.mobile.title{'}'}
+                        {translate('wpanelothersmobiletitle')}
                       </label>
                     </div>
                     <div className="switch-preview__active" />
@@ -175,7 +178,7 @@ export const OtherComponent = () => {
               {/* Modal Header */}
               <div className="modal-header text-center">
                 <h4 className="modal-title w-100" id="popupTitle">
-                  {'{'}language.wpanel.others.change_image.title{'}'}
+                  {translate('wpanelotherschange_imagetitle')}
                 </h4>
                 <button
                   type="button"
@@ -187,7 +190,7 @@ export const OtherComponent = () => {
               </div>
               {/* Modal body */}
               <div className="modal-body PopUpContent">
-                {'{'}language.wpanel.others.loading.title{'}'}
+                {translate('wpanelothersloadingtitle')}
               </div>
             </div>
           </div>
@@ -207,21 +210,21 @@ export const OtherComponent = () => {
                       smartphone
                     </span>
                     <span>
-                      {'{'}language.wpanel.others.mobile.title{'}'}
+                      {translate('wpanelothersmobiletitle')}
                     </span>
                   </div>
                   <ul className="group-device group-mobile">
                     <li className="device-screen _320">
-                      {'{'}language.wpanel.others.mobile.320.title{'}'}
+                      {translate('wpanelothersmobile.320title')}
                     </li>
                     <li className="device-screen _360">
-                      {'{'}language.wpanel.others.mobile.360.title{'}'}
+                      {translate('wpanelothersmobile.360title')}
                     </li>
                     <li className="device-screen _375">
-                      {'{'}language.wpanel.others.mobile.375.title{'}'}
+                      {translate('wpanelothersmobile.375title')}
                     </li>
                     <li className="device-screen _414">
-                      {'{'}language.wpanel.others.mobile.414.title{'}'}
+                      {translate('wpanelothersmobile.414title')}
                     </li>
                   </ul>
                 </li>
@@ -236,15 +239,15 @@ export const OtherComponent = () => {
                       tablet_android
                     </span>
                     <span>
-                      {'{'}language.wpanel.others.tablet.title{'}'}
+                      {translate('wpanelotherstablettitle')}
                     </span>
                   </div>
                   <ul className="group-device group-tablet">
                     <li className="device-screen _768">
-                      {'{'}language.wpanel.others.tablet.768.title{'}'}
+                      {translate('wpanelotherstablet.768title')}
                     </li>
                     <li className="device-screen _1024">
-                      {'{'}language.wpanel.others.tablet.1024.title{'}'}
+                      {translate('wpanelotherstablet.1024title')}
                     </li>
                   </ul>
                 </li>
@@ -259,18 +262,18 @@ export const OtherComponent = () => {
                       computer
                     </span>
                     <span>
-                      {'{'}language.wpanel.others.desktop.title{'}'}
+                      {translate('wpanelothersdesktoptitle')}
                     </span>
                   </div>
                   <ul className="group-device group-desktop">
                     <li className="device-screen _1280">
-                      {'{'}language.wpanel.others.desktop.1280.title{'}'}
+                      {translate('wpanelothersdesktop.1280title')}
                     </li>
                     <li className="device-screen _1360">
-                      {'{'}language.wpanel.others.desktop.1360.title{'}'}
+                      {translate('wpanelothersdesktop.1360title')}
                     </li>
                     <li className="device-screen _1920">
-                      {'{'}language.wpanel.others.desktop.1920.title{'}'}
+                      {translate('wpanelothersdesktop.1920title')}
                     </li>
                   </ul>
                 </li>
@@ -284,7 +287,7 @@ export const OtherComponent = () => {
                       wallpaper
                     </span>
                     <span>
-                      {'{'}language.wpanel.others.background.title{'}'}
+                      {translate('wpanelothersbackgroundtitle')}
                     </span>
                   </div>
                   <ul className="group-background builder-backgrounds"></ul>
@@ -305,7 +308,7 @@ export const OtherComponent = () => {
                 data-toggle="tab"
                 href="#home"
               >
-                {'{'}language.wpanel.others.upload.title{'}'}
+                {translate('wpanelothersuploadtitle')}
               </a>
             </li>
             <li className="nav-item">
@@ -314,7 +317,7 @@ export const OtherComponent = () => {
                 data-toggle="tab"
                 href="#menu1"
               >
-                {'{'}language.wpanel.others.url.title{'}'}
+                {translate('wpanelothersurltitle')}
               </a>
             </li>
             <li className="nav-item">
@@ -323,7 +326,7 @@ export const OtherComponent = () => {
                 data-toggle="tab"
                 href="#menu2"
               >
-                {'{'}language.wpanel.others.base64.title{'}'}
+                {translate('wpanelothersbase64title')}
               </a>
             </li>
             <li className="nav-item filemanager-item">
@@ -332,7 +335,7 @@ export const OtherComponent = () => {
                 data-toggle="tab"
                 href="#menu3"
               >
-                {'{'}language.wpanel.others.filemanager.title{'}'}
+                {translate('wpanelothersfilemanagertitle')}
               </a>
             </li>
           </ul>
@@ -343,10 +346,10 @@ export const OtherComponent = () => {
               className="container tab-pane active nav-content active"
             >
               <p className="margin-bottom--lv4 py-2">
-                {'{'}language.wpanel.others.des_upload_image.title{'}'}
+                {translate('wpanelothersdes_upload_imagetitle')}
               </p>
               <label className="mb-2">
-                {'{'}language.wpanel.others.file.title{'}'}
+                {translate('wpanelothersfiletitle')}
               </label>
               <input
                 type="file"
@@ -370,7 +373,7 @@ export const OtherComponent = () => {
                   }}
                 />
                 <span className="des-upload">
-                  {'{'}language.wpanel.others.des_drag_image.title{'}'}
+                  {translate('wpanelothersdes_drag_imagetitle')}
                 </span>
               </p>
               <div className="text-center mt-3">
@@ -379,16 +382,16 @@ export const OtherComponent = () => {
                   type=""
                   className="buttonSaveUpload btn btn-default"
                 >
-                  {'{'}language.wpanel.others.upload.title{'}'}
+                  {translate('wpanelothersuploadtitle')}
                 </button>
               </div>
             </div>
             <div id="menu1" className="container tab-pane fade nav-content">
               <p className="margin-bottom--lv4 py-2">
-                {'{'}language.wpanel.others.des_url_image.title{'}'}
+                {translate('wpanelothersdes_url_imagetitle')}
               </p>
               <label className="mb-2">
-                {'{'}language.wpanel.others.url.title{'}'}
+                {translate('wpanelothersurltitle')}
               </label>
               <input
                 placeholder="https://sample.com/images/example.png"
@@ -402,16 +405,16 @@ export const OtherComponent = () => {
                   type=""
                   className="buttonSaveUrl btn btn-default"
                 >
-                  {'{'}language.wpanel.others.save.title{'}'}
+                  {translate('wpanelotherssavetitle')}
                 </button>
               </div>
             </div>
             <div id="menu2" className="container tab-pane fade nav-content">
               <p className="margin-bottom--lv4 py-2">
-                {'{'}language.wpanel.others.des_base64_image.title{'}'}
+                {translate('wpanelothersdes_base64_imagetitle')}
               </p>
               <label className="mb-2">
-                {'{'}language.wpanel.others.base64.title{'}'}
+                {translate('wpanelothersbase64title')}
               </label>
               <textarea
                 rows={5}
@@ -426,7 +429,7 @@ export const OtherComponent = () => {
                   type=""
                   className="buttonSaveBase64 btn btn-default"
                 >
-                  {'{'}language.wpanel.others.save.title{'}'}
+                  {translate('wpanelotherssavetitle')}
                 </button>
               </div>
             </div>
@@ -448,13 +451,13 @@ export const OtherComponent = () => {
                   href="javascript:;"
                   className="btn btn-primary mr-1 filemanager-ok"
                 >
-                  {'{'}language.wpanel.others.filemanager.ok{'}'}
+                  {translate('wpanelothersfilemanager.ok')}
                 </a>
                 <a
                   href="javascript:;"
                   className="btn btn-secondary filemanager-cancel"
                 >
-                  {'{'}language.wpanel.others.filemanager.cancel{'}'}
+                  {translate('wpanelothersfilemanager.cancel')}
                 </a>
               </div>
             </div>
@@ -471,7 +474,7 @@ export const OtherComponent = () => {
                 data-toggle="tab"
                 href="#home"
               >
-                {'{'}language.wpanel.others.upload.title{'}'}
+                {translate('wpanelothersuploadtitle')}
               </a>
             </li>
             <li className="nav-item">
@@ -480,7 +483,7 @@ export const OtherComponent = () => {
                 data-toggle="tab"
                 href="#menu1"
               >
-                {'{'}language.wpanel.others.url.title{'}'}
+                {translate('wpanelothersurltitle')}
               </a>
             </li>
           </ul>
@@ -488,10 +491,10 @@ export const OtherComponent = () => {
           <div className="tab-content">
             <div id="home" className="container tab-pane active nav-content">
               <p className="margin-bottom--lv4 py-2">
-                {'{'}language.wpanel.others.des_upload_video.title{'}'}
+                {translate('wpanelothersdes_upload_videotitle')}
               </p>
               <label>
-                {'{'}language.wpanel.others.file.title{'}'}
+                {translate('wpanelothersfiletitle')}
               </label>
               <input
                 type="file"
@@ -523,15 +526,15 @@ export const OtherComponent = () => {
                 type=""
                 className="buttonSaveUpload btn btn-default"
               >
-                {'{'}language.wpanel.others.upload.title{'}'}
+                {translate('wpanelothersuploadtitle')}
               </button>
             </div>
             <div id="menu1" className="container tab-pane fade nav-content">
               <p className="margin-bottom--lv4 py-2">
-                {'{'}language.wpanel.others.des_url_video.title{'}'}
+                {translate('wpanelothersdes_url_videotitle')}
               </p>
               <label>
-                {'{'}language.wpanel.others.url.title{'}'}
+                {translate('wpanelothersurltitle')}
               </label>
               <input type="text" name="url_video" className="url-video" />
               <button
@@ -539,7 +542,7 @@ export const OtherComponent = () => {
                 type=""
                 className="buttonSaveUrl btn btn-default"
               >
-                {'{'}language.wpanel.others.save.title{'}'}
+                {translate('wpanelotherssavetitle')}
               </button>
             </div>
           </div>
@@ -551,7 +554,7 @@ export const OtherComponent = () => {
           <div className="form-group">
             {/*<p class="title-widget">Name your custom widget</p>*/}
             <p className="margin-bottom--lv4">
-              {'{'}language.wpanel.others.des_widget_name.title{'}'}
+              {translate('wpanelothersdes_widget_nametitle')}
             </p>
             <input
               type="text"
@@ -567,7 +570,7 @@ export const OtherComponent = () => {
             id="buttonCustomWidget"
             className="btn btn-primary btn-add-custom-widget-[ID]"
           >
-            {'{'}language.wpanel.others.add.title{'}'}
+            {translate('wpanelothersaddtitle')}
           </button>
         </div>
       </div>
@@ -578,7 +581,7 @@ export const OtherComponent = () => {
           <div className="tab-content">
             <div id="home" className="container tab-pane active nav-content">
               <p className="margin-bottom--lv4 py-2">
-                {'{'}language.wpanel.others.des_template_toolbox.title{'}'}
+                {translate('wpanelothersdes_template_toolboxtitle')}
               </p>
             </div>
           </div>
@@ -642,7 +645,7 @@ export const OtherComponent = () => {
           >
             <div className="form-group">
               <p className="margin-bottom--lv4">
-                {'{'}language.wpanel.others.des_upload_template.title{'}'}
+                {translate('wpanelothersdes_upload_templatetitle')}
               </p>
               <div data-dojo-attach-point="formInputs">
                 <fieldset
@@ -739,7 +742,7 @@ export const OtherComponent = () => {
             <li
               className="builder-action-selected-button builder-select-parent-button"
               data-toggle="tooltip"
-              title="{language.wpanel.others.select_parent.title}"
+              title="{language.wpanel.others.select_parenttitle}"
             >
               <span
                 className="material-icons-outlined"
@@ -748,11 +751,11 @@ export const OtherComponent = () => {
                 arrow_upward
               </span>
             </li>
-            {/* <li class="builder-action-selected-button builder-add-widget-button" data-toggle="tooltip" title="{language.wpanel.others.add_widget.title}"><i class="{builder-icon-layer-plus}"></i></li> */}
+            {/* <li class="builder-action-selected-button builder-add-widget-button" data-toggle="tooltip" title="{language.wpanel.others.add_widgettitle}"><i class="{builder-icon-layer-plus}"></i></li> */}
             <li
               className="builder-action-selected-button builder-remove-selected-button"
               data-toggle="tooltip"
-              title="{language.wpanel.others.delete.title}"
+              title="{language.wpanel.others.deletetitle}"
             >
               <span
                 className="material-icons-outlined"
@@ -764,7 +767,7 @@ export const OtherComponent = () => {
             <li
               className="builder-action-selected-button builder-duplicate-selected-button"
               data-toggle="tooltip"
-              title="{language.wpanel.others.duplicate.title}"
+              title="{language.wpanel.others.duplicatetitle}"
             >
               <span
                 className="material-icons-outlined"
@@ -776,7 +779,7 @@ export const OtherComponent = () => {
             <li
               className="builder-action-selected-button builder-code-selected-button"
               data-toggle="tooltip"
-              title="{language.wpanel.others.code.title}"
+              title="{language.wpanel.others.codetitle}"
             >
               <span
                 className="material-icons-outlined"
@@ -789,7 +792,7 @@ export const OtherComponent = () => {
         </div>
         <div
           className="builder-tool builder-outline-move-hook"
-          title="{language.wpanel.others.move.title}"
+          title="{language.wpanel.others.movetitle}"
         >
           <span
             className="material-icons-outlined"
@@ -823,7 +826,7 @@ export const OtherComponent = () => {
       <div className="modal" id="EditHtmlModal">
         <div className="mb-4">
           <h2 className="mb-2">
-            {'{'}language.edit_html_code{'}'}
+            {translate('edit_html_code')}
           </h2>
           <textarea id="EditHtml" defaultValue={''} />
           <button

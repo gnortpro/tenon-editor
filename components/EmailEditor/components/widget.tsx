@@ -1,6 +1,9 @@
+import useTranslation from 'next-translate/useTranslation';
 import React from 'react';
 
 export const WidgetComponent = () => {
+  const { t: translate } = useTranslation('common');
+
   return (
     <>
       <link
@@ -54,37 +57,33 @@ export const WidgetComponent = () => {
                 <li>
                   <div className="action-menu design-menu">
                     <span className="action-design">
-                      {'{'}language.menubar.items.design{'}'}
+                      {translate('menubaritemsdesign')}
                     </span>
                     <span className="material-icons">expand_more</span>
                     <ul className="design display">
                       <li>
                         <a className="design-new" href="#">
-                          {' '}
-                          {'{'}language.menubar.items.designs.new{'}'}{' '}
+                          {translate('menubaritemsdesignsnew')}
                         </a>
                       </li>
                       <li>
                         <a className="design-clear" href="#">
-                          {' '}
-                          {'{'}language.menubar.items.designs.clear{'}'}{' '}
+                          {translate('menubaritemsdesignsclear')}
                         </a>
                       </li>
                       <li>
                         <a className="design-from-template" href="#">
-                          {'{'}language.menubar.items.designs.new_template{'}'}{' '}
+                          {translate('menubaritemsdesignsnew_template')}
                         </a>
                       </li>
                       <li>
                         <a className="design-upload-template" href="#">
-                          {'{'}language.menubar.items.designs.upload_template
-                          {'}'}{' '}
+                          {translate('menubaritemsdesignsupload_template')}
                         </a>
                       </li>
                       <li>
                         <a className="save-design" href="#">
-                          {' '}
-                          {'{'}language.menubar.items.designs.save{'}'}{' '}
+                          {translate('menubaritemsdesignssave')}
                         </a>
                       </li>
                       <li>
@@ -93,7 +92,7 @@ export const WidgetComponent = () => {
                           href="#"
                           data-method="POST"
                         >
-                          {'{'}language.menubar.items.designs.exit{'}'}{' '}
+                          {translate('menubaritemsdesignsexit')}
                         </a>
                       </li>
                     </ul>
@@ -102,7 +101,7 @@ export const WidgetComponent = () => {
                 <li className="choose-template-menu">
                   <div className="action-menu action-choose-template">
                     <span className="choose">
-                      {'{'}language.menubar.items.change_template{'}'}
+                      {translate('menubaritemschange_template')}
                     </span>
                     <span className="material-icons">expand_more</span>
                     <div className="show-list-template">
@@ -117,19 +116,18 @@ export const WidgetComponent = () => {
                 <li>
                   <div className="action-menu action action-preview preview-page">
                     <span className="ac">
-                      {'{'}language.menubar.items.preview{'}'}
+                      {translate('menubaritemspreview')}
                     </span>
                     <span className="material-icons">expand_more</span>
                     <ul className="display">
                       <li>
                         <a className="preview-design-desktop" href="#">
-                          {'{'}language.menubar.items.previews.desktop{'}'}{' '}
+                          {translate('menubaritemspreviewsdesktop')}
                         </a>
                       </li>
                       <li>
                         <a className="preview-design-mobile" href="#">
-                          {' '}
-                          {'{'}language.menubar.items.previews.mobile{'}'}
+                          {translate('menubaritemspreviewsmobile')}
                         </a>
                       </li>
                     </ul>
@@ -138,20 +136,18 @@ export const WidgetComponent = () => {
                 <li>
                   <div className="action-menu view-mode">
                     <span className="ac" id="show-mode">
-                      {'{'}language.menubar.items.mode_design{'}'}
+                      {translate('menubaritemsmode_design')}
                     </span>
                     <span className="material-icons">expand_more</span>
                     <ul className="display-view-mode">
                       <li>
                         <a className="view-mode-design" href="#">
-                          {' '}
-                          {'{'}language.menubar.items.mode_designs.design{'}'}
+                          {translate('menubaritemsmode_designsdesign')}
                         </a>
                       </li>
                       <li>
                         <a className="view-mode-source" href="#">
-                          {' '}
-                          {'{'}language.menubar.items.mode_designs.source{'}'}
+                          {translate('menubaritemsmode_designssource')}
                         </a>
                       </li>
                     </ul>
@@ -164,7 +160,7 @@ export const WidgetComponent = () => {
                 <li
                   className="device mode-mobile"
                   data-mode="mode-mobile"
-                  title="{language.menubar.items.devices.mobile}"
+                  title={translate('menubaritemsdevicesmobile')}
                 >
                   <span
                     className="material-icons-outlined icon-mode"
@@ -176,7 +172,7 @@ export const WidgetComponent = () => {
                 <li
                   className="device mode-tablet"
                   data-mode="mode-tablet"
-                  title="{language.menubar.items.devices.tablet}"
+                  title={translate('menubaritemsdevicestablet')}
                 >
                   <span
                     className="material-icons-outlined icon-mode"
@@ -188,7 +184,7 @@ export const WidgetComponent = () => {
                 <li
                   className="device mode-desktop"
                   data-mode="mode-desktop"
-                  title="{language.menubar.items.devices.desktop}"
+                  title={translate('menubaritemsdevicesdesktop')}
                 >
                   <span className="material-icons-outlined icon-mode">
                     computer
@@ -200,62 +196,60 @@ export const WidgetComponent = () => {
                   <span className="material-icons-outlined icon mr-1">
                     help_outline
                   </span>
-                  <span className="help">
-                    {'{'}language.menubar.items.help{'}'}
-                  </span>
+                  <span className="help">{translate('menubaritemshelp')}</span>
                 </li>
               </ul>
               {/*<div class="sync">
-                <button class="btn btn-primary btn-sync"><i class="fab fa-google"></i> {language.menubar.items.sync} </button>
+                <button class="btn btn-primary btn-sync"><i class="fab fa-google"></i> {translate('menubaritemssync} </button>
                 <span class="choose-sync"><i class="{builder-icon-angle-down}"></span>
                 <ul class="action-sync">
-                    <li class="synchronization google-driver" data-sync="google-driver" data-title="{language.menubar.items.syncs.google_driver.title}" disable="disable">
-                        {language.menubar.items.syncs.google_driver}
+                    <li class="synchronization google-driver" data-sync="google-driver" data-title={translate('menubaritemssyncs.google_driver.title}" disable="disable')"
+                        {translate('menubaritemssyncs.google_driver}
                     </li>
-                    <li class="synchronization dropbox" data-sync="dropbox" data-title="{language.menubar.items.syncs.dropbox}">
-                        {language.menubar.items.syncs.dropbox}
+                    <li class="synchronization dropbox" data-sync="dropbox" data-title={translate('menubaritemssyncs.dropbox}')"
+                        {translate('menubaritemssyncs.dropbox}
                     </li>
-                    <li class="synchronization one-driver" data-sync="one-driver" data-title="{language.menubar.items.syncs.one_driver}">
-                        {language.menubar.items.syncs.one_driver}
+                    <li class="synchronization one-driver" data-sync="one-driver" data-title={translate('menubaritemssyncs.one_driver}')"
+                        {translate('menubaritemssyncs.one_driver}
                     </li>
                     <li class="setting">
-                        {language.menubar.items.syncs.setting}
+                        {translate('menubaritemssyncs.setting}
                     </li>
                 </ul>
             </div>
             
             <div class="lang">
-                <button class="btn btn-primary btn-sync"><i class="fab fa-google"></i> {language.menubar.items.lang} </button>
+                <button class="btn btn-primary btn-sync"><i class="fab fa-google"></i> {translate('menubaritemslang} </button>
                 <span class="choose-lang"><i class="{builder-icon-angle-down}"></span>
                 <ul class="action-lang">
-                    <li class="change-language lang-en" data-lang="english" data-title="{language.menubar.items.lang.eng}" disable="disable">
-                        {language.menubar.items.lang.eng}
+                    <li class="change-language lang-en" data-lang="english" data-title={translate('menubaritemslang.eng}" disable="disable')"
+                        {translate('menubaritemslang.eng}
                     </li>
-                    <li class="change-language lang-vi" data-lang="vietname" data-title="{language.menubar.items.lang.vie}">
-                        {language.menubar.items.lang.vie}
+                    <li class="change-language lang-vi" data-lang="vietname" data-title={translate('menubaritemslang.vie}')"
+                        {translate('menubaritemslang.vie}
                     </li>
-                    <li class="change-language lang-jp" data-lang="japan" data-title="{language.menubar.items.lang.jpa}">
-                        {language.menubar.items.lang.jpa}
+                    <li class="change-language lang-jp" data-lang="japan" data-title={translate('menubaritemslang.jpa}')"
+                        {translate('menubaritemslang.jpa}
                     </li>
                     <li class="setting">
-                        {language.menubar.items.lang.setting}
+                        {translate('menubaritemslang.setting}
                     </li>
                 </ul>
             </div>*/}
               <div className="d-flex align-items-center">
                 <a className="save-design" href="#">
                   <button className="btn btn-primary btn-save menu-bar-action">
-                    {'{'}language.menubar.items.save{'}'}
+                    {translate('menubaritemssave')}
                   </button>
                 </a>
                 <a className="save-and-close" href="#">
                   <button className="btn btn-primary btn-save-and-close menu-bar-action">
-                    {'{'}language.menubar.items.save_and_close{'}'}
+                    {translate('menubaritemssave_and_close')}
                   </button>
                 </a>
                 <a className="export-button" href="#">
                   <button className="btn btn-primary btn-export menu-bar-action">
-                    {'{'}language.export{'}'}
+                    {translate('export')}
                   </button>
                 </a>
                 <a className="builder-close" href="#">
@@ -308,9 +302,7 @@ export const WidgetComponent = () => {
                         <span className="material-icons-outlined mr-2">
                           developer_board
                         </span>
-                        <span>
-                          {'{'}language.navbar.contents.widgets{'}'}
-                        </span>
+                        <span>{translate('navbarcontentswidgets')}</span>
                       </span>
                     </a>
                     <a
@@ -327,9 +319,7 @@ export const WidgetComponent = () => {
                         <span className="material-icons-outlined mr-2">
                           local_offer
                         </span>
-                        <span>
-                          {'{'}language.navbar.contents.layouts{'}'}
-                        </span>
+                        <span>{translate('navbarcontentslayouts')}</span>
                       </span>
                     </a>
                     <a
@@ -345,9 +335,7 @@ export const WidgetComponent = () => {
                         <span className="material-icons-outlined mr-2">
                           local_offer
                         </span>
-                        <span>
-                          {'{'}language.navbar.contents.tags{'}'}
-                        </span>
+                        <span>{translate('navbarcontentstags')}</span>
                       </span>
                     </a>
                     <a
@@ -359,9 +347,7 @@ export const WidgetComponent = () => {
                         <span className="material-icons-outlined mr-2">
                           settings
                         </span>
-                        <span>
-                          {'{'}language.navbar.contents.setting{'}'}
-                        </span>
+                        <span>{translate('navbarcontentssetting')}</span>
                       </span>
                     </a>
                   </div>
@@ -376,21 +362,21 @@ export const WidgetComponent = () => {
                     <div className="container modules widgets-sections">
                       <div className="widgets-section widgets-form">
                         <label className="block-title">
-                          {'{'}language.section.form_elements{'}'}
+                          {translate('section.form_elements')}
                         </label>
                         <div className="widgets-form-container fields-container">
                           <div className="text-center full-width">
-                            {'{'}language.navbar.contents.loading{'}'}
+                            {translate('navbarcontentsloading')}
                           </div>
                           {/*load khoi xoay */}
                         </div>
                       </div>
                       <div className="widgets-section widgets-other mb-4">
                         <label className="block-title">
-                          {'{'}language.section.general{'}'}
+                          {translate('section.general')}
                         </label>
                         <div className="content_widget_container">
-                          {'{'}language.navbar.contents.loading{'}'}
+                          {translate('navbarcontentsloading')}
                           {/*load khoi xoay */}
                         </div>
                         <div
@@ -407,7 +393,7 @@ export const WidgetComponent = () => {
                               borderRadius: 2,
                             }}
                           >
-                            {'{'}language.navbar.contents.show_more.loading{'}'}
+                            {translate('navbarcontentsshow_moreloading')}
                           </a>
                           <a
                             className="link-widget link-hide_less"
@@ -420,22 +406,20 @@ export const WidgetComponent = () => {
                               display: 'none',
                             }}
                           >
-                            {'{'}language.navbar.contents.show_less.loading{'}'}
+                            {translate('navbarcontentsshow_lessloading')}
                           </a>
                         </div>
                       </div>
                     </div>
                     <div className="container detail-content">
                       <div className="properties-pannel-title">
-                        <h4>
-                          {'{'}language.navbar.contents.content_property{'}'}
-                        </h4>
+                        <h4>{translate('navbarcontentscontent_property')}</h4>
                         <div className="action">
                           <a
                             className="delete builder-remove-selected-button"
                             href="javascript:;"
                             data-toggle="tooltip"
-                            title="{language.navbar.items.actions.delete}"
+                            title="{navbaritemsactionsdelete}"
                           >
                             <span className="material-icons-outlined">
                               delete
@@ -444,7 +428,7 @@ export const WidgetComponent = () => {
                           <a
                             className="duplicate builder-duplicate-selected-button"
                             href="javascript:;"
-                            title="{language.navbar.items.actions.duplicate}"
+                            title="{navbaritemsactionsduplicate}"
                           >
                             <span
                               className="material-icons-outlined"
@@ -456,7 +440,7 @@ export const WidgetComponent = () => {
                           <a
                             className="move"
                             href="javascript:;"
-                            title="{language.navbar.items.actions.down}"
+                            title="{navbaritemsactionsdown}"
                           >
                             <span className="material-icons-outlined">
                               keyboard_arrow_down
@@ -475,7 +459,7 @@ export const WidgetComponent = () => {
                   >
                     {/* <div class="container rows-module" style="">
                             <div class="row row_widget_container">
-                                {language.navbar.contents.loading}
+                                {language.navbarcontentsloading}
                             </div>
                         </div> */}
                   </div>
@@ -487,7 +471,7 @@ export const WidgetComponent = () => {
                   >
                     <div className="container rows-module" style={{}}>
                       <div className="row row_widget_container">
-                        {'{'}language.navbar.contents.loading{'}'}
+                        {translate('navbarcontentsloading')}
                       </div>
                     </div>
                   </div>
@@ -515,7 +499,7 @@ export const WidgetComponent = () => {
             <button
               className="undo-redo-action-history"
               data-toggle="tooltip"
-              title="{language.bottombar.items.history}"
+              title="{language.bottombaritemshistory}"
               style={{ borderRadius: 2 }}
             >
               <i className="{builder-icon-history} history" />
@@ -523,14 +507,14 @@ export const WidgetComponent = () => {
             <button
               className="undo-redo-action-undo"
               data-toggle="tooltip"
-              title="{language.bottombar.items.undo}"
+              title="{language.bottombaritemsundo}"
             >
               <i className="{builder-icon-reply} history" />
             </button>
             <button
               className="undo-redo-action-redo disable-redo"
               data-toggle="tooltip"
-              title="{language.bottombar.items.redo}"
+              title="{language.bottombaritemsredo}"
             >
               <i
                 className="{builder-icon-reply} history"
@@ -593,9 +577,7 @@ export const WidgetComponent = () => {
             <div className="col-md-6 footer-left">
               <a href="#" className="back footer-exit-without-save">
                 <i className="{builder-icon-angle-left}" />
-                <p>
-                  {'{'}language.bottombar.items.exit{'}'}
-                </p>
+                <p>{translate('bottombaritemsexit')}</p>
               </a>
             </div>
             <div className="col-md-6 footer-right">
@@ -608,7 +590,7 @@ export const WidgetComponent = () => {
                   justifyContent: 'flex-end',
                 }}
               >
-                {'{'}language.bottombar.items.last_save{'}'}
+                {translate('bottombaritemslast_save')}
               </span>
             </div>
           </div>

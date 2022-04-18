@@ -14,6 +14,8 @@
     "jquery": "^3.6.0",
     "js-beautify": "^1.14.3",
     "next": "12.1.5",
+    "next-compose-plugins": "^2.2.1",
+    "next-translate": "^1.4.0",
     "popper.js": "^1.16.1",
     "postcss": "^8.4.12",
     "react": "18.0.0",
